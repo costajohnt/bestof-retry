@@ -1,1 +1,3 @@
-
+    <hr>
+    <!-- for demo purposes: shows current logged-in user -->
+    <p>Current user: <%= current_user.email if current_user %></p>
