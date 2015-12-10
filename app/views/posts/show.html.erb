@@ -9,6 +9,15 @@
 				
 				</li>
 			</ul>
+			
+			<% @comments.each do |comment| %>
+
+			    <div>
+			        Name: <%= comment.title %> <br>
+			        Description: <%=  comment.location %>
+			    </div>
+
+			<% end %>
 		</div>
 	</div>
 </div>

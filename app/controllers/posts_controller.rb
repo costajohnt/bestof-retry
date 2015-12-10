@@ -19,6 +19,7 @@ class PostsController < ApplicationController
 	end
 
 	def show
+		@comments = Comment.all
 		@post = Post.find(params[:id])
 		render :show
 	end

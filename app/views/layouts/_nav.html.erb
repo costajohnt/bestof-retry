@@ -1,0 +1,21 @@
+<nav id='nav' class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="logo navbar-brand" id="home" href="/">BestOfSF</a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="#" id="">
+      <ul class="nav navbar-nav navbar-right">
+        <% if current_user.present? %> 
+        <% @user = current_user %> 
+        <li>Welcome, <%= @user.email %></li>
+        <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+        <% else %> 
+        <li><%= link_to "Sign Up now or", signup_path, method: "get" %></li>
+        <li><%= link_to "Log in", login_path, method: "get" %></li>
+        <% end %> 
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>

@@ -10,8 +10,9 @@
 #
 
 class User < ActiveRecord::Base
-
-  
+  has_many :posts
+  has_many :comments
+  has_many :votes
 
   has_secure_password
   # note: has_secure_password automatically adds validations
