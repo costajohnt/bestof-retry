@@ -13,25 +13,27 @@ class PostsController < ApplicationController
 	def create
 		@posts = Post.all
 		@post = Post.create(post_params)
+		@post.user_id = current_user.id
 		if @post.save
 			redirect_to @post
 		end
 	end
 
 	def show
-		@comments = Comment.all
+		@user = current_user
 		@post = Post.find(params[:id])
+		@comment = Comment.new
+		@comments = Comment.where(post_id: @post).reverse_order.all
 		render :show
 	end
 
 	def destroy
-	    # save the id parameter
-	    id = params[:id]
 	    # find the post to delete by id
-	    @post = Post.find(id)
+	    @post = Post.find(params[:id])
 	    # destroy the post
 	    @post.destroy
 	    # redirect to creatures index
+	    puts "im in post contrl"
 	    redirect_to root_path
 	    # ^ same as redirect_to "/creatures"
 	end
@@ -43,4 +45,3 @@ class PostsController < ApplicationController
 	end
 
 end
-

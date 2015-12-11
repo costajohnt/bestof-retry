@@ -10,7 +10,14 @@ Rails.application.routes.draw do
 
   resources :users, only: [:create]
   resources :sessions, only: [:create]
-  resources :posts
-  resources :comments
+  
+  resources :posts do
+  	resources :comments
+  end
+
+  # resources :comments do
+  # 	resources :votes
+  # end
+  # resources :votes, only: [:create, :update]
 
 end

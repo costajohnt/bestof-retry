@@ -1,23 +1,30 @@
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-sm-6 col-sm-offset-3">
+		<div class="col-sm-8 col-sm-offset-2">
 			<ul class="list-group">
 				<li class="list-group-item text-center">
-					<div>
-						<%= @post.title %><%= button_to "Delete", @post, method: :delete %>
-					</div>
-				
+					<span><%= @post.title %><%= button_to "Delete", @post, method: :delete %></span>
 				</li>
 			</ul>
-			
+
+			<div class="row">	
+				<%= form_for [@post, @comment] do |f| %>
+				<%= f.text_field :title %>
+				<%= f.text_field :location %>
+				<%= f.hidden_field :post_id, :value => @post.id %>
+				<%= f.hidden_field :user_id, :value => @user.id %>
+				<%= f.submit "savecomment", class: 'btn btn-primary' %>
+				<% end %>
+			</div>
+<div>
 			<% @comments.each do |comment| %>
-
-			    <div>
-			        Name: <%= comment.title %> <br>
-			        Description: <%=  comment.location %>
-			    </div>
-
+			<div>
+				Title: <%= comment.title %> <br>
+				Location: <%=  comment.location %>
+				<%= button_to "Delete", post_comment_path(@post, comment), method: :delete %>
+			</div>
 			<% end %>
+			</div>
 		</div>
 	</div>
 </div>
