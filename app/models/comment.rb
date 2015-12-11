@@ -12,7 +12,14 @@
 #
 
 class Comment < ActiveRecord::Base
-	has_many :votes
 	belongs_to :post, dependent: :destroy
 	belongs_to :user
+
+	acts_as_votable
 end
+
+# @comment = Comment.new(:name => 'my comment!')
+# @comment.save
+
+# @comment.liked_by @user
+# @comment.votes_for.size # => 1

@@ -23,6 +23,15 @@
 				Location: <%=  comment.location %>
 				<%= button_to "Delete", post_comment_path(@post, comment), method: :delete %>
 			</div>
+			<%= link_to like_comment_path(comment), method: :put do %>
+			  Upvote
+			  <%= comment.get_upvotes.size %>
+			<% end %>
+
+			<%= link_to dislike_comment_path(comment), method: :put do %>
+			  Downvote
+			  <%= comment.get_downvotes.size %>
+			<% end %>
 			<% end %>
 			</div>
 		</div>

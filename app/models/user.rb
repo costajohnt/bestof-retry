@@ -12,7 +12,9 @@
 class User < ActiveRecord::Base
   has_many :posts
   has_many :comments
-  has_many :votes
+
+  acts_as_voter
+
 
   has_secure_password
   # note: has_secure_password automatically adds validations
