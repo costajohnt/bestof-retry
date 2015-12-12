@@ -7,10 +7,10 @@
 				</li>
 			</ul>
 
-			<div class="row">	
+			<div class="form-inline">	
 				<%= form_for [@post, @comment] do |f| %>
-				<%= f.text_field :title %>
-				<%= f.text_field :location %>
+				<%= f.text_field :title, class: 'form-control' %>
+				<%= f.text_field :location, class: 'form-control' %>
 				<%= f.hidden_field :post_id, :value => @post.id %>
 				<%= f.hidden_field :user_id, :value => @user.id %>
 				<%= f.submit "savecomment", class: 'btn btn-primary' %>

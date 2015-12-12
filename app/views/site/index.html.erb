@@ -5,7 +5,7 @@
   </div>
 </div>
 
-<div class="container text-center">
+<div class="container text-center searchbar">
   <%= form_tag posts_path, { method: "get", :class => 'navbar-form', :role => 'search'} do %>
   <div class="input-group input-group-lg">
     <%= text_field_tag :search, params[:search], placeholder: "search for the best", class: 'form-control', required: true %>
