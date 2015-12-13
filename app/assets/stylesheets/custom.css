@@ -1,6 +1,36 @@
-.jumbotron {
+.jumbotron, .navbar-custom {
 	background-color: #F23DB7;
+	color: white;
+	opacity: .90;
+	border-radius: 0 !important;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.navbar-custom a {
 	color: white;
 }
 
+h1 {
+	font-size: 36px;
+}
 
+h2 {
+	font-size: 18px;
+	font-family: 'Francois One', sans-serif;
+}
+
+.btn {
+	background-color: #38F9FF;
+	opacity: .8;
+	-webkit-transition: all 1.0s;
+	-moz-transition: all 1.0s;
+	transition: all 1.0s;
+}
+
+.btn:hover {
+	background-color: #32E0E5;
+	opacity: 1;
+	-webkit-transition: all 1.0s;
+	-moz-transition: all 1.0s;
+	transition: all 1.0s;
+}
