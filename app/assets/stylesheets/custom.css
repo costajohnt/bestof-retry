@@ -151,3 +151,12 @@ ul.nav a:hover, a:focus {
 	padding-left: 3px !important;
 	padding-right: 3px !important;
 }
+
+.media-object {
+	width: 100px;
+	height: 100px;
+}
+
+.media	{
+	display: inline;
+}
