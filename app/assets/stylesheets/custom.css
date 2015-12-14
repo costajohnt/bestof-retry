@@ -141,13 +141,13 @@ ul.nav a:hover, a:focus {
 	margin-bottom: 1.5em;
 }
 
-.comment-containers {
+/*.comment-containers {
 	padding-bottom: 20px;
 	padding-right: 0px !important;
 	padding-left: 0px !important;
-}
+}*/
 
-.comment-boxes {
+/*.comment-boxes {
 	padding-left: 3px !important;
 	padding-right: 3px !important;
 }
@@ -159,4 +159,4 @@ ul.nav a:hover, a:focus {
 
 .media	{
 	display: inline;
-}
+}*/

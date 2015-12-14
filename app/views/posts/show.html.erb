@@ -26,7 +26,7 @@
 	<div class="row"  id="commentForm">
 		<div class="form-group">	
 			<%= form_for [@post, @comment] do |f| %>
-			<%= f.text_field :title, class: 'commentform', placeholder: 'what is the item?', :autofocus => true %>
+			<%= f.text_field :title, class: 'commentform', placeholder: 'what is it?', :autofocus => true %>
 			<%= f.text_field :location, class: 'commentform', placeholder: 'where can I get one?' %>
 			<%= f.hidden_field :post_id, :value => @post.id %>
 			<%= f.hidden_field :user_id, :value => @user.id %>
@@ -39,18 +39,15 @@
 	<div class="container-fluid comments-container">
 	<!-- SET A TOGGLE BELOW SO THAT USERS CAN ORDER COMMENTS BY MORE RECENT (DEFAULT SETTING) OR BY VOTES (CURRENTLY ENABLED, OUR DEFAULT) -->
 		<% Comment.order(:cached_votes_up).each do |comment| %>
-		<div>
 			Title: <%= comment.title %> <br>
 			Location: <%=  comment.location %>
 			<%= button_to "Delete", post_comment_path(@post, comment), method: :delete, class: 'btn btn-primary' %>
-		</div>
-		<%= link_to like_comment_path(comment), method: :put do %>
-		<span class:"glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
-		upvote
-		<span class:"badge"><%= comment.get_upvotes.size %></span>
+		<%= link_to like_comment_path(comment), class:"glyphicon glyphicon-chevron-up", method: :put do %>
+		
+		<%= comment.get_upvotes.size %>
 		<% end %>
 
-		<%= link_to dislike_comment_path(comment), method: :put do %>
+		<%= link_to dislike_comment_path(comment), class:"glyphicon glyphicon-chevron-down", method: :put do %>
 		downvote
 		<%= comment.get_downvotes.size %>
 		<% end %>
