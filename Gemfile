@@ -33,6 +33,10 @@ gem "twitter-bootstrap-rails"
 
 gem 'acts_as_votable', '~> 0.10.0'
 
+group :production do
+  gem 'rails_12factor'
+end
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
