@@ -1,39 +1,76 @@
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-sm-8 col-sm-offset-2">
-			<ul class="list-group">
-				<li class="list-group-item text-center">
-					<span><%= @post.title %><%= button_to "Delete", @post, method: :delete, class: 'btn btn-primary' %></span>
-				</li>
+<!-- NAVBAR FOR POSTS#SHOW CUSTOM -->
+<nav id='nav' class="navbar navbar-custom">
+	<div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<a class="logo navbar-brand" id="home" href="/">Best in the Land</a>
+		</div>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="#" id="">
+			<ul class="nav navbar-nav navbar-right">
+				<li class="postTitle"><%= link_to @post.title %></li>
+				<% if current_user.present? %>  
+				<li><%= link_to "#{current_user.email}" %></li>
+				<li><%= link_to "Log out", logout_path %></li>
+				<% else %> 
+				<li><%= link_to "Sign Up now or", signup_path %></li>
+				<li><%= link_to "Log in", login_path %></li>
+				<% end %> 
 			</ul>
+		</div><!-- /.navbar-collapse -->
+	</div><!-- /.container-fluid -->
+</nav>
 
-			<div class="form-inline">	
-				<%= form_for [@post, @comment] do |f| %>
-				<%= f.text_field :title, class: 'form-control' %>
-				<%= f.text_field :location, class: 'form-control' %>
-				<%= f.hidden_field :post_id, :value => @post.id %>
-				<%= f.hidden_field :user_id, :value => @user.id %>
-				<%= f.submit "savecomment", class: 'btn btn-primary' %>
-				<% end %>
-			</div>
-<div>
-			<% @comments.each do |comment| %>
-			<div>
-				Title: <%= comment.title %> <br>
-				Location: <%=  comment.location %>
-				<%= button_to "Delete", post_comment_path(@post, comment), method: :delete, class: 'btn btn-primary' %>
-			</div>
-			<%= link_to like_comment_path(comment), method: :put do %>
-			  <span class:"glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
-			 <%= comment.get_upvotes.size %>
+<!-- FORM FOR CREATING A NEW COMMENT -->
+<div class="container-fluid text-center">
+	<div class="row"  id="commentForm">
+		<div class="form-group">	
+			<%= form_for [@post, @comment] do |f| %>
+			<%= f.text_field :title, class: 'commentform', placeholder: 'what is the item?', :autofocus => true %>
+			<%= f.text_field :location, class: 'commentform', placeholder: 'where can I get one?' %>
+			<%= f.hidden_field :post_id, :value => @post.id %>
+			<%= f.hidden_field :user_id, :value => @user.id %>
+			<%= f.submit "save", class: 'btn btn-primary' %>
 			<% end %>
-
-			<%= link_to dislike_comment_path(comment), method: :put do %>
-			  downvote
-			  <%= comment.get_downvotes.size %>
-			<% end %>
-			<% end %>
-			</div>
 		</div>
 	</div>
 </div>
+<!-- DISPLAY COMMENT -->
+	<div class="container-fluid comments-container">
+		<% @comments.each do |comment| %>
+		<div class="col-xs-4 col-md-4 comment-boxes">
+		<div>
+			Title: <%= comment.title %> <br>
+			Location: <%=  comment.location %>
+			<%= button_to "Delete", post_comment_path(@post, comment), method: :delete, class: 'btn btn-primary' %>
+		
+		<%= link_to like_comment_path(comment), method: :put do %>
+		<span class:"glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+		<span class:"badge"><%= comment.get_upvotes.size %></span>
+		<% end %>
+
+		<%= link_to dislike_comment_path(comment), method: :put do %>
+		downvote
+		<%= comment.get_downvotes.size %>
+		<% end %>
+		<% end %>
+	</div>
+	</div>
+</div>
+
+
+
+<!-- <div class="col-sm-8 col-sm-offset-2"> -->
+		<!-- 	<ul class="list-group">
+				<li class="list-group-item text-center">
+					<span><%= @post.title %><%= button_to "x", @post, method: :delete, class: 'btn btn-primary' %></span>
+				</li>
+			</ul> -->
+			<!-- 	</div> -->
+
+
+
+
+
+
+
