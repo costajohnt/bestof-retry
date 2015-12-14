@@ -37,7 +37,7 @@
 </div>
 <!-- DISPLAY COMMENT -->
 	<div class="container-fluid comments-container">
-		<% @comments.each do |comment| %>
+		<% Comment.order(:cached_votes_up).each do |comment| %>
 		<div>
 			Title: <%= comment.title %> <br>
 			Location: <%=  comment.location %>
