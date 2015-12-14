@@ -37,6 +37,7 @@
 </div>
 <!-- DISPLAY COMMENT -->
 	<div class="container-fluid comments-container">
+	<!-- SET A TOGGLE BELOW SO THAT USERS CAN ORDER COMMENTS BY MORE RECENT (DEFAULT SETTING) OR BY VOTES (CURRENTLY ENABLED, OUR DEFAULT) -->
 		<% Comment.order(:cached_votes_up).each do |comment| %>
 		<div>
 			Title: <%= comment.title %> <br>
