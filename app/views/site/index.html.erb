@@ -1,3 +1,4 @@
+<!-- JUMBOTRON -->
 <div class="jumbotron">
   <div class="text-center">
     <h1 class="animated fadeIn">Best In The Land</h1>
@@ -5,19 +6,58 @@
   </div>
 </div>
 
+<!-- SEARCH FOR POSTS -->
 <div class="container text-center">
   <div class="form-inline">
-      <span>
-        <%= form_tag posts_path, { method: "get", :class => 'navbar-form', :role => 'search'} do %>
-        <%= text_field_tag :search, params[:search], required: true, class: 'searchform', :autofocus => true %>
-        <button class="btn" type="submit" id="searchbtn">search</button>
-      </span>
+    <span>
+      <%= form_tag posts_path, { method: "get", :class => 'navbar-form', :role => 'search'} do %>
+      <%= text_field_tag :search, params[:search], required: true, class: 'searchform', :autofocus => true %>
+      <button class="btn" type="submit" id="searchbtn">search</button>
+    </span>
     <% end %>
   </div>
-  <div id="searchGuide">Search for a category name to find the best item.  For example, you could search for "burrito" or "swing dance class".</div>
+  <div id="searchGuide">Search for a category name to find the best item.  For example, you could search for "burrito" or "swing dance class".
   </div>
 </div>
+
+<!-- DISPLAY POSTS -->
+<div class="row">
+  <div class="col-sm-4">
+  <h2 class="text-center">New</h2>
+    <div class="container-fluid">
+      <% @newposts.each do |post| %>
+      <div class="list-group text-center">
+        <div><%= button_to post.title, post, class: "splashPost results well btn col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3", method: "get" %><br>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-sm-4">
+  <h2 class="text-center">Recent Activity</h2>
+    <div class="container-fluid">
+      <% @recentposts.each do |post| %>
+      <div class="list-group text-center">
+        <div><%= button_to post.title, post, class: "splashPost results well btn col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3", method: "get" %><br>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-sm-4">
+  <h2 class="text-center">Popular</h2>
+    <div class="container-fluid">
+      <% @popularposts.each do |post| %>
+      <div class="list-group text-center">
+        <div><%= button_to post.title, post, class: "splashPost results well btn col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3", method: "get" %><br>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
 </div>
+
+<!-- FOOTER -->
 <div class="footer">
   <div class="container">
     <div class="row text-center">

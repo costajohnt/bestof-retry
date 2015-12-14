@@ -34,14 +34,6 @@ class CommentsController < ApplicationController
 	end
 
 	def destroy
-	    # # find the post to delete by id
-	    # @comment = Comment.find(params[:id])
-	    # # destroy the post
-	    # @comment.destroy
-	    # # redirect to creatures index
-	    # redirect_to :back
-	    # # ^ same as redirect_to "/creatures"
-
 	    post_id = params[:post_id]
 	    puts "post id:" + post_id
 	    @comment = Comment.find(params[:id])
