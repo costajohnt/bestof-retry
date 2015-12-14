@@ -21,9 +21,10 @@
 </div>
 
 <!-- DISPLAY POSTS -->
+<div class="col-sm-10 col-sm-offset-1">
 <div class="row">
   <div class="col-sm-4">
-  <h2 class="text-center">New</h2>
+  <h3 class="text-center">New</h3>
     <div class="container-fluid">
       <% @newposts.each do |post| %>
       <div class="list-group text-center">
@@ -34,7 +35,7 @@
     </div>
   </div>
   <div class="col-sm-4">
-  <h2 class="text-center">Recent Activity</h2>
+  <h3 class="text-center">Recent Activity</h3>
     <div class="container-fluid">
       <% @recentposts.each do |post| %>
       <div class="list-group text-center">
@@ -45,7 +46,7 @@
     </div>
   </div>
   <div class="col-sm-4">
-  <h2 class="text-center">Popular</h2>
+  <h3 class="text-center">Popular</h3>
     <div class="container-fluid">
       <% @popularposts.each do |post| %>
       <div class="list-group text-center">
@@ -56,6 +57,8 @@
     </div>
   </div>
 </div>
+</div>
+<br><br>
 
 <!-- FOOTER -->
 <div class="footer">
