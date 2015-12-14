@@ -43,7 +43,7 @@ class CommentsController < ApplicationController
 	    post_id = params[:post_id]
 	    puts "post id:" + post_id
 	    @comment = Comment.find(params[:id])
-	    @post = Post.find(post_id)
+	    @post = Post.friendly.find(post_id)
 	    @comment.delete
 	    flash[:success] = "Post destroyed"
 	    redirect_to :back

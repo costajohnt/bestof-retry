@@ -25,7 +25,7 @@ class PostsController < ApplicationController
 	def show
 		@disable_nav = true
 		@user = current_user
-		@post = Post.find(params[:id])
+		@post = Post.friendly.find(params[:id])
 		@comment = Comment.new
 		@comments = Comment.where(post_id: @post).reverse_order.all
 		render :show
@@ -33,7 +33,7 @@ class PostsController < ApplicationController
 
 	def destroy
 	    # find the post to delete by id
-	    @post = Post.find(params[:id])
+	    @post = Post.friendly.find(params[:id])
 	    # destroy the post
 	    @post.destroy
 	    # redirect to creatures index
