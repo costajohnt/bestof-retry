@@ -23,6 +23,7 @@ class PostsController < ApplicationController
 	end
 
 	def show
+		@disable_nav = true
 		@user = current_user
 		@post = Post.find(params[:id])
 		@comment = Comment.new
