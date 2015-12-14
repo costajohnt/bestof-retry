@@ -9,10 +9,10 @@
 </div>
 
 <% if @posts.empty? %>
-<h1 class="text-center">Sorry, no category exists for your search</h1>
+<h1 class="text-center">Sorry, no category <%= params[:search] %> for your search</h1>
 <div class="col-sm-4 col-sm-offset-4">
 	<%= form_for :post, url: "/posts", method: "post" do |f| %>
-	<%= f.text_field :title %>
+	<%= f.hidden_field :title, value: params[:search] %>
 	<%= f.submit "create one", class: "btn btn-primary" %>
 	<% end %>
 </div>

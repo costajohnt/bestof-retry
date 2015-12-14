@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+	before_filter :authorize, only: [:create]
 
 	def upvote 
 	  @comment = Comment.find(params[:id])
@@ -22,7 +23,8 @@ class CommentsController < ApplicationController
 	end
 
 	def create
-	  @comment = Comment.new(comment_params)
+		@post = Post.friendly.find(params[:post_id])
+	  @comment = @post.comments.new(comment_params)
 	  @comment.user_id = current_user.id #or whatever is you session name
 	  if @comment.save
 	    redirect_to :back

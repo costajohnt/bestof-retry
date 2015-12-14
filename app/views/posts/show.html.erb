@@ -22,39 +22,51 @@
 </nav>
 
 <!-- FORM FOR CREATING A NEW COMMENT -->
-<div class="container-fluid text-center">
-	<div class="row"  id="commentForm">
+<div class="container-fluid">
+	<div class="col-sm-6 col-sm-offset-3"  id="commentForm">
 		<div class="form-group">	
 			<%= form_for [@post, @comment] do |f| %>
-			<%= f.text_field :title, class: 'commentform', placeholder: 'what is it?', :autofocus => true %>
-			<%= f.text_field :location, class: 'commentform', placeholder: 'where can I get one?' %>
-			<%= f.hidden_field :post_id, :value => @post.id %>
-			<%= f.hidden_field :user_id, :value => @user.id %>
-			<%= f.submit "save", class: 'btn btn-primary' %>
+				<div class="form-group">
+					<%= f.text_field :title, class: 'form-control commentform', autocomplete: 'off', placeholder: 'What?', :autofocus => true %>	
+				</div>
+				<div class="form-group">
+					<%= f.text_field :location, class: 'form-control commentform', autocomplete: 'off', placeholder: 'Where?' %>	
+				</div>
+				<div class="text-right">
+					<%= f.submit "save", class: 'btn btn-primary' %>	
+				</div>
+
 			<% end %>
 		</div>
+		<br>
+		<br>
+
+		<ul class="list-group">
+			<% Comment.order(:cached_votes_up).each do |comment| %>
+				<li class="list-group-item clearfix">
+					<div class="col-xs-10">
+						<h4><%= comment.title %></h4> 
+						<div class="text-muted"><%=  comment.location %></div>	
+						<div class="text-right">
+							<small><%= link_to "Delete", post_comment_path(@post, comment), method: :delete %></small>	
+						</div>
+					</div>
+					<div class="col-xs-2">
+						<%= link_to like_comment_path(comment), method: :put do %>
+							<i class="glyphicon glyphicon-chevron-up"></i>
+							<%= comment.get_upvotes.size %>
+						<% end %>
+
+						<%= link_to dislike_comment_path(comment), class:"glyphicon glyphicon-chevron-down", method: :put do %>
+						downvote
+							<%= comment.get_downvotes.size %>
+						<% end %>	
+					</div>
+				</li>
+			<% end %>
+		</ul>
 	</div>
 </div>
-<!-- DISPLAY COMMENT -->
-	<div class="container-fluid comments-container">
-	<!-- SET A TOGGLE BELOW SO THAT USERS CAN ORDER COMMENTS BY MORE RECENT (DEFAULT SETTING) OR BY VOTES (CURRENTLY ENABLED, OUR DEFAULT) -->
-		<% Comment.order(:cached_votes_up).each do |comment| %>
-			Title: <%= comment.title %> <br>
-			Location: <%=  comment.location %>
-			<%= button_to "Delete", post_comment_path(@post, comment), method: :delete, class: 'btn btn-primary' %>
-		<%= link_to like_comment_path(comment), class:"glyphicon glyphicon-chevron-up", method: :put do %>
-		
-		<%= comment.get_upvotes.size %>
-		<% end %>
-
-		<%= link_to dislike_comment_path(comment), class:"glyphicon glyphicon-chevron-down", method: :put do %>
-		downvote
-		<%= comment.get_downvotes.size %>
-		<% end %>
-		<% end %>
-	</div>
-
-
 
 
 <!-- <div class="col-sm-8 col-sm-offset-2"> -->

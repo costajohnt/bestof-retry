@@ -2,10 +2,15 @@ class PostsController < ApplicationController
 	
 	def index
 		if params[:search]
-		     @posts = Post.search(params[:search]).order("created_at DESC")
-		   else
-		     @posts = Post.order("created_at DESC")
-		   end
+			@posts = Post.search(params[:search]).order("created_at DESC")
+		else
+			@posts = Post.order("created_at DESC")
+		end
+
+		if @posts.length == 1
+
+			redirect_to @posts.first
+		end
 	end
 
 	def new
@@ -14,7 +19,6 @@ class PostsController < ApplicationController
 	end
 
 	def create
-		@posts = Post.all
 		@post = Post.create(post_params)
 		@post.user_id = current_user.id
 		if @post.save
