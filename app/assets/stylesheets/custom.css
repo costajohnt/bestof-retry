@@ -116,6 +116,15 @@ input:focus {
 	margin-top: 1.5em;
 }
 
+.results {
+	margin-bottom: .5em;
+	font-size: 1.5em;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#resultsPad {
+	padding-bottom: 4em;
+}
 /*.fadeIn {
 	transition: transform 1200ms ease-in;
 }*/
