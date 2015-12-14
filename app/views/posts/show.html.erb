@@ -21,15 +21,15 @@
 			<div>
 				Title: <%= comment.title %> <br>
 				Location: <%=  comment.location %>
-				<%= button_to "Delete", post_comment_path(@post, comment), method: :delete %>
+				<%= button_to "Delete", post_comment_path(@post, comment), method: :delete, class: 'btn btn-primary' %>
 			</div>
 			<%= link_to like_comment_path(comment), method: :put do %>
-			  Upvote
-			  <%= comment.get_upvotes.size %>
+			  <span class:"glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+			 <%= comment.get_upvotes.size %>
 			<% end %>
 
 			<%= link_to dislike_comment_path(comment), method: :put do %>
-			  Downvote
+			  downvote
 			  <%= comment.get_downvotes.size %>
 			<% end %>
 			<% end %>

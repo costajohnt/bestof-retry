@@ -1,36 +1,121 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+}
 .jumbotron, .navbar-custom {
 	background-color: #F23DB7;
 	color: white;
 	opacity: .90;
 	border-radius: 0 !important;
-	font-family: 'Josefin Sans', sans-serif;
+	/*font-family: 'Josefin Sans', sans-serif;*/
+	/*font-style: bold;*/
+}
+
+.jumbotron {
+	margin-bottom: 10%;
 }
 
 .navbar-custom a {
 	color: white;
 }
 
-h1 {
-	font-size: 36px;
+.jumbotron h1 {
+	font-size: 5.2em;
+	font-family: 'Roboto', sans-serif;
+/*	-webkit-transition: color 1s;
+	-moz-transition:    color 1s;
+	-ms-transition:     color 1s;
+	-o-transition:      color 1s;
+	transition:         color 1s;*/
+	/*-webkit-text-stroke: 2px black;*/
 }
 
-h2 {
-	font-size: 18px;
-	font-family: 'Francois One', sans-serif;
+/*.jumbotron h1:hover {
+	color: rgb(56, 249, 255);
+}*/
+
+.jumbotron h2 {
+	font-size: 1.7em;
+	/*font-family: 'Francois One', sans-serif;*/
+	font-family: 'Open Sans', sans-serif;
 }
 
 .btn {
-	background-color: #38F9FF;
-	opacity: .8;
+	-webkit-border-radius: 0;
+	  -moz-border-radius: 0;
+	  border-radius: 0px;
+	  font-family: 'Open Sans', sans-serif;
+	  color: #000000;
+	  /*font-size: 17px;*/
+	  background: #ffffff;
+	  /*padding: 14px 29px 14px 29px;*/
+	  border: solid black 2px;
+	  text-decoration: none;
+	/*background-color: #38F9FF;*/
+	/*opacity: .8;*/
 	-webkit-transition: all 1.0s;
 	-moz-transition: all 1.0s;
 	transition: all 1.0s;
 }
 
 .btn:hover {
-	background-color: #32E0E5;
-	opacity: 1;
+	-webkit-border-radius: 0;
+	  -moz-border-radius: 0;
+	  border-radius: 0px;
+	  font-family: 'Open Sans', sans-serif;
+	  color: #000000;
+	  /*font-size: 17px;*/
+	  /*background: #ffffff;*/
+	  /*padding: 14px 29px 14px 29px;*/
+	  border: solid black 2px;
+	  text-decoration: none;
+	background-color: rgba(56, 249, 255, 0.6);
+	/*opacity: .6;*/
 	-webkit-transition: all 1.0s;
 	-moz-transition: all 1.0s;
 	transition: all 1.0s;
+	/*border: 0;*/
 }
+
+.searchform {
+	-webkit-border-radius: 0;
+	  -moz-border-radius: 0;
+	  border-radius: 0px;
+	  font-family: Arial;
+	  color: #000000;
+	  font-size: 1.25em;
+	  padding: 14px 29px 14px 29px;
+	  /*border: solid #1f628d 2px;*/
+	  text-decoration: none;
+	  /*margin-bottom: 300px;*/
+	border-top: 0px none rgb(51, 51, 51);
+    border-right: 0px none rgb(51, 51, 51);
+    border-bottom: 1px solid rgb(211, 211, 211);
+    border-left: 0px none rgb(51, 51, 51);
+    height: 46px;
+    width: 300px;
+    margin-right: 6px;
+}
+
+input:focus { 
+    outline: none !important;
+}
+
+#searchbtn {
+	padding: .75em 2em;
+}
+
+.footer {
+	margin-top: 20em;
+}
+
+#foot {
+	font-size: 1em;
+}
+
+#searchGuide {
+	margin-top: 1.5em;
+}
+
+/*.fadeIn {
+	transition: transform 1200ms ease-in;
+}*/
