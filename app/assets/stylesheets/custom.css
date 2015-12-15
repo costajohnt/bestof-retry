@@ -9,7 +9,7 @@ body {
 }
 
 .jumbotron {
-	margin-bottom: 3em;
+	margin-bottom: 5em;
 }
 
 .navbar-custom a {
@@ -95,9 +95,9 @@ input:focus {
 	padding: .75em 2em;
 }
 
-.footer {
-	margin-top: 20em;
-}
+/*.footer {
+	margin-top: 3em;
+}*/
 
 #foot {
 	font-size: 1em;
@@ -105,7 +105,7 @@ input:focus {
 
 #searchGuide {
 	margin-top: 1em;
-	margin-bottom: 3em;
+	margin-bottom: 1.5em;
 }
 
 .results {
@@ -188,6 +188,23 @@ h3 {
 	.postCreate {
 		margin-left: .5em;
 	}
+
+	#searchbtn {
+		margin-top: 1em;
+	}
+
+	.jumbotron {
+		margin-bottom: 0em;
+	}
+
+	#searchGuide {
+		margin-top: 1em;
+		margin-bottom: 1.5em;
+	}
+
+/*	.footer {
+		margin-top: 0em;
+	}*/
 }
 /*.comment-containers {
 	padding-bottom: 20px;
