@@ -24,8 +24,8 @@
 <!-- DISPLAY POSTS -->
 <div class="row">
   <div class="col-sm-4">
-    <h3 class="splashPost text-center col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-10 col-md-offset-1">Recent Activity</h3>
-    <% @recentposts.each do |post| %>
+    <h3 class="splashPost text-center col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-10 col-md-offset-1">Active</h3>
+    <% @activeposts.each do |post| %>
     <div class="list-group text-center">
       <div><%= button_to post.title, post, class: "splashPost results btn col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-10 col-md-offset-1", method: "get" %><br>
       </div>

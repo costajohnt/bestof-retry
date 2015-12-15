@@ -5,7 +5,7 @@ class SiteController < ApplicationController
   	@newposts = @posts.limit(5).reverse_order
   	@popularposts = Post.order("comments_count, created_at DESC").limit(5).reverse_order
   	# FILTER BELOW NEEDS WORK
-  	@recentposts = Post.includes(:comments).order("comments.created_at desc").limit(5).reverse_order  
+  	@activeposts = Post.includes(:comments).order("comments.updated_at ASC").limit(5)
   	@disable_nav = true
     render :index
   end

@@ -12,8 +12,8 @@
   <%= stylesheet_link_tag :application, media: :all %>
 </head>
 <body>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeD-7dIy9Tg5b5BL_2qSJ92aPoFTiBDq4&libraries=place">
-</script>
+<script src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+</script><!-- key=AIzaSyAeD-7dIy9Tg5b5BL_2qSJ92aPoFTiBDq4 -->
   <%= render partial: "layouts/nav" unless @disable_nav %>
   <% flash.each do |name, msg| %>
     <%= content_tag :div, msg, class: "alert #{name == 'error' ? 'alert-danger' : 'alert-info'}" %>

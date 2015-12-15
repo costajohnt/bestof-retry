@@ -3,13 +3,14 @@
 	<div class="container-fluid">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
-			<a class="nav navbar-brand" id="home" href="/">Best in the Land</a>
+			<a class="nav navbar-nav navbar-brand" id="home" href="/">Best in the Land</a>
+			<!-- <li class="nav navbar-nav navbar-brand"><%= link_to "Best in the Land", root_path %></li> -->
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="#" id="">
 			<ul class="nav navbar-nav navbar-right">
-				<div id="postTitle"><%= @post.title %></div>
+			<div id="postTitle"><%= @post.title %></div>
 				<% if current_user.present? %>  
 				<li><%= link_to "#{current_user.email}" %></li>
 				<li><%= link_to "Log out", logout_path %></li>
@@ -32,7 +33,7 @@
 				<%= f.text_field :title, class: 'commentform', autocomplete: 'off', placeholder: 'What?', required: true, :autofocus => true %>	
 			</div>
 			<div class="form-group">
-				<%= f.text_field :location, class: 'commentform', id: 'location', autocomplete: 'off', placeholder: 'Where?' %>	
+				<%= f.text_field :location, class: 'commentform', id: 'location', placeholder: 'Where?' %>	
 			</div>
 			<div class="text-right">
 				<%= f.submit "save", class: 'btn btn-primary', id: 'commentBtn' %>	

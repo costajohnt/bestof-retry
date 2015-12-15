@@ -586,7 +586,15 @@
 
 })( jQuery, window, document );
 
-$("commentBtn").click(function(){
-	$("#location").geocomplete();
-});
- // Option 1: Call on element.
+
+// ('.commentform').focus(function() {
+//   $(".commentform").geocomplete();  // Option 1: Call on element.
+//   $.fn.geocomplete("commentform"); 
+// })
+
+
+
+
+
+
+
