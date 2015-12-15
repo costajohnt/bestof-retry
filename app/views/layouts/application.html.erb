@@ -5,12 +5,15 @@
 
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<!-- AIzaSyBOnwKTxYT3oU6CwwPY6hdVrs8njJoWYbM -->
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= csrf_meta_tags %>
   <%= stylesheet_link_tag :application, media: :all %>
 </head>
 <body>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeD-7dIy9Tg5b5BL_2qSJ92aPoFTiBDq4&libraries=place">
+</script>
   <%= render partial: "layouts/nav" unless @disable_nav %>
   <% flash.each do |name, msg| %>
     <%= content_tag :div, msg, class: "alert #{name == 'error' ? 'alert-danger' : 'alert-info'}" %>

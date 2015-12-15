@@ -37,6 +37,12 @@ group :production do
   gem 'rails_12factor'
 end
 
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'ffaker'
+  gem 'factory_girl_rails'
+end
+
 # Use unicorn as the app server
 # gem 'unicorn'
 

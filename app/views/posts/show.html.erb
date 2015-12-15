@@ -24,6 +24,7 @@
 
 <!-- FORM FOR CREATING A NEW COMMENT -->
 <div class="container-fluid">
+	<% if current_user.present? %>
 	<div class="col-sm-6 col-sm-offset-3">
 		<div class="form-group">	
 			<%= form_for [@post, @comment] do |f| %>
@@ -31,17 +32,22 @@
 				<%= f.text_field :title, class: 'commentform', autocomplete: 'off', placeholder: 'What?', required: true, :autofocus => true %>	
 			</div>
 			<div class="form-group">
-				<%= f.text_field :location, class: 'commentform', autocomplete: 'off', placeholder: 'Where?' %>	
+				<%= f.text_field :location, class: 'commentform', id: 'location', autocomplete: 'off', placeholder: 'Where?' %>	
 			</div>
 			<div class="text-right">
-				<%= f.submit "save", class: 'btn btn-primary' %>	
+				<%= f.submit "save", class: 'btn btn-primary', id: 'commentBtn' %>	
 			</div>
-
+		</div>
+		<% end %>
+		<% end %>
+		<div>
+			<% if current_user.blank? %>
+			<h3 class="text-center">Sign in to vote for your favorites and add to the list!</h3>
 			<% end %>
 		</div>
 		<br>
 		<br>
-
+		<!-- SHOW COMMENTS -->
 		<ul class="list-group">
 			<% Comment.order(:cached_votes_up).each do |comment| %>
 			<li class="list-group-item clearfix">
