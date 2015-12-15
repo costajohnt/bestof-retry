@@ -32,10 +32,10 @@
 				<%= f.text_field :title, class: 'commentform', autocomplete: 'off', placeholder: 'What?', required: true, :autofocus => true %>	
 			</div>
 			<div class="form-group">
-				<%= f.text_field :location, class: 'commentform', autocomplete: 'off', placeholder: 'Where?' %>	
+				<%= f.text_field :location, class: 'commentform', id: 'location', autocomplete: 'off', placeholder: 'Where?' %>	
 			</div>
 			<div class="text-right">
-				<%= f.submit "save", class: 'btn btn-primary' %>	
+				<%= f.submit "save", class: 'btn btn-primary', id: 'commentBtn' %>	
 			</div>
 		</div>
 		<% end %>

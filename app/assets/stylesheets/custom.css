@@ -110,8 +110,12 @@ input:focus {
 
 .results {
 	margin-bottom: .5em;
-	font-size: 1.5em;
+	font-size: 1em;
 	font-family: 'Open Sans', sans-serif;
+/*	padding-top: .75em;
+	padding-bottom: .75em;
+	padding-left: 1em;
+	padding-right: 1em;*/
 }
 
 #resultsPad {
@@ -201,7 +205,14 @@ h3 {
 		margin-top: 1em;
 		margin-bottom: 1.5em;
 	}
+	
+	.jumbotron h1 {
+		font-size: 4em;
+	}
 
+	.jumbotron h2 {
+		font-size: 1.5em;
+	}
 /*	.footer {
 		margin-top: 0em;
 	}*/
