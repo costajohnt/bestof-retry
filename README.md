@@ -1,12 +1,12 @@
 # Description
 ### Best in the Land helps users find the best item in any category.  Users find other people's favorites, vote on them, and create their own.  
  
- # Technologies
- ### Ruby on Rails, JavaScript
+# Technologies
+### Ruby on Rails, JavaScript
 
- # Approach
- #### My aim was to create a clean and simple app that had minimal, but effective styling, and was extremely functional.  I started by deciding how I wanted the basic CRUD and views to work. I wrote user stories and drew wireframes to use as guides.  
-#### When the CRUD functionality for all of the resources was built, I spent a lot of time styling and working on authorization.  I only added new features when the basic CRUD was fully functional with error messages and validations, it worked great on heroku, and it looked professional.
+# Approach
+###### My aim was to create a clean and simple app that had minimal, but effective styling, and was extremely functional.  I started by deciding how I wanted the basic CRUD and views to work. I wrote user stories and drew wireframes to use as guides.  
+###### When the CRUD functionality for all of the resources was built, I spent a lot of time styling and working on authorization.  I only added new features when the basic CRUD was fully functional with error messages and validations, it worked great on heroku, and it looked professional.
 
 # Installation
 - clone this repo
