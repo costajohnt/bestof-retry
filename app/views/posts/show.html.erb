@@ -1,5 +1,5 @@
 <!-- NAVBAR FOR POSTS#SHOW CUSTOM -->
-<nav id='nav' class="navbar navbar-custom">
+<nav id="showNav" class="navbar navbar-custom">
 	<div class="container-fluid">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
@@ -8,7 +8,7 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="#" id="">
 			<ul class="nav navbar-nav navbar-right">
-				<li class="postTitle"><%= link_to @post.title %></li>
+				<li id="postTitle"><%= @post.title %></li>
 				<% if current_user.present? %>  
 				<li><%= link_to "#{current_user.email}" %></li>
 				<li><%= link_to "Log out", logout_path %></li>
