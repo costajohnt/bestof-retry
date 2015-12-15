@@ -29,7 +29,7 @@ class CommentsController < ApplicationController
 	  	if @comment.save
 	  		# THIS IS WRONG BUT IT SHOULD UPDATE THE updated_at ATTRIBUTE FOR POSTS WHEN A NEW COMMENT IS CREATED ON THAT POST
 	  		# @comment.post.updated_at == (Date)Time.current
-	  		@post.updated_at == (Date)Time.current
+	  		# @post.updated_at == (Date)Time.current
 	  		redirect_to :back
 	  	else
 	  		flash.now[:danger] = "error"
