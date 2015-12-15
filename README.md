@@ -22,4 +22,12 @@ When the CRUD functionality for all of the resources was built, I spent a lot of
 
 #Wireframes
 
-![Login/Signup](image1.JPG)
+![Login/Signup](image1.JPG) <!-- THIS DOESNT WORK -->
+
+<!-- Inline-style: 
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+ -->
+
+#Entity Relationship Diagrams
+
+#Unsolved Problems/Major Hurdles
