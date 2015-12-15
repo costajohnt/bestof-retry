@@ -31,7 +31,7 @@ class PostsController < ApplicationController
 		@user = current_user
 		@post = Post.friendly.find(params[:id])
 		@comment = Comment.new
-		@comments = Comment.where(post_id: @post)
+		@comments = Comment.where(post_id: @post).reverse_order
 		render :show
 	end
 
