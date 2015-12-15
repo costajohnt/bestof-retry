@@ -27,6 +27,9 @@ class CommentsController < ApplicationController
 		@comment = @post.comments.new(comment_params)
 	  	@comment.user_id = current_user.id #or whatever is you session name
 	  	if @comment.save
+	  		# THIS IS WRONG BUT IT SHOULD UPDATE THE updated_at ATTRIBUTE FOR POSTS WHEN A NEW COMMENT IS CREATED ON THAT POST
+	  		# @comment.post.updated_at == (Date)Time.current
+	  		@post.updated_at == (Date)Time.current
 	  		redirect_to :back
 	  	else
 	  		flash.now[:danger] = "error"
