@@ -3,12 +3,13 @@
 	<div class="container-fluid">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
-			<a class="logo navbar-brand" id="home" href="/">Best in the Land</a>
+			<a class="nav navbar-brand" id="home" href="/">Best in the Land</a>
 		</div>
+
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="#" id="">
 			<ul class="nav navbar-nav navbar-right">
-				<li id="postTitle"><%= @post.title %></li>
+				<div id="postTitle"><%= @post.title %></div>
 				<% if current_user.present? %>  
 				<li><%= link_to "#{current_user.email}" %></li>
 				<li><%= link_to "Log out", logout_path %></li>

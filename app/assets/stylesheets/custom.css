@@ -172,6 +172,23 @@ h3 {
 #showNav {
 	margin-bottom: 5em; 
 }
+
+@media  (max-width: 800px) {
+/*	.postCreate {
+		padding-right: 3em;
+		padding-left: 3em;
+		padding-top: .5em;
+		padding-bottom: .5em;
+		font-size: 1.5em;
+*/
+	#resultsPad {
+		padding-bottom: 1.5em;
+	}
+
+	.postCreate {
+		margin-left: .5em;
+	}
+}
 /*.comment-containers {
 	padding-bottom: 20px;
 	padding-right: 0px !important;

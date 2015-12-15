@@ -11,12 +11,14 @@
 <% if @posts.empty? %>
 <h1 class="text-center">Sorry, the search returned no results for "<%= params[:search] %>".</h1>
 <br>
-<div class="col-sm-4 col-sm-offset-4">
-<div class="col-sm-offset-3">
+<div class="col-sm-4 col-sm-offset-4 col-xs-6 col-xs-offset-2">
+<div class="col-sm-offset-3 col-xs-offset-1">
+<!-- <div class="col-xs-offset-1"> -->
 	<%= form_for :post, url: "/posts", method: "post" do |f| %>
 	<%= f.hidden_field :title, value: params[:search] %>
 	<%= f.submit "create?", class: "postCreate btn btn-primary" %>
 	<% end %>
+	<!-- </div> -->
 </div>
 </div>
 <% end %>
