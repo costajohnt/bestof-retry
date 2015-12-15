@@ -82,7 +82,7 @@ body {
     border-right: 0px none rgb(51, 51, 51);
     border-bottom: 1px solid rgb(211, 211, 211);
     border-left: 0px none rgb(51, 51, 51);
-    height: 46px;
+    width: 100%;
     margin-right: 6px;
 }
 
@@ -126,7 +126,7 @@ ul.nav a {
 
 ul.nav a:hover, a:focus { 
 	text-decoration: none;
-	background-color: rgba(140, 249, 255, 1) !important; 
+	background-color: rgba(120, 249, 255, 1) !important; 
 	-webkit-transition: all 1.0s;
 	-moz-transition: all 1.0s;
 	transition: all 1.0s;
