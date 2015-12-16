@@ -20,7 +20,7 @@
 		<div class="collapse navbar-collapse" id="navbar-collapse-1">
 			<ul class="nav navbar-nav navbar-right">
 				<% if current_user.present? %>  
-				<li><%= link_to "#{current_user.email}" %></li>
+				<li><%= link_to "#{current_user.email}", user_path %></li>
 				<li><%= link_to "Log out", logout_path %></li>
 				<% else %> 
 				<li><%= link_to "Sign Up now or", signup_path %></li>
@@ -57,7 +57,6 @@
 		<hr>
 		<!-- SHOW COMMENTS -->
 		<ul class="list-group">
-		<!-- Comment.order(:cached_votes_up).each -->
 			<% @comments.order(:cached_votes_up).each do |comment| %>
 			<li class="list-group-item clearfix">
 				<div class="col-xs-10">
@@ -89,16 +88,6 @@
 		</ul>
 	</div>
 </div>
-
-
-<!-- <div class="col-sm-8 col-sm-offset-2"> -->
-		<!-- 	<ul class="list-group">
-				<li class="list-group-item text-center">
-					<span><%= @post.title %><%= button_to "x", @post, method: :delete, class: 'btn btn-primary' %></span>
-				</li>
-			</ul> -->
-			<!-- 	</div> -->
-
 
 
 

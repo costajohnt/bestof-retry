@@ -1,5 +1,10 @@
 class UsersController < ApplicationController
   before_filter :authorize, only: [:show]
+  
+  # def index
+  #   # @posts = Post.where(Post.user_id: current_user)
+  #   @posts = Post.all
+  # end
 
   def new
     # redirect user if already logged in
@@ -22,7 +27,7 @@ class UsersController < ApplicationController
         flash[:notice] = "Successfully signed up."
         # redirect_to "/profile"
         # refactored with route helpers:
-        redirect_to profile_path
+        redirect_to :back
       else
         flash[:error] = user.errors.full_messages.join(', ')
         # redirect_to "/signup"
@@ -33,6 +38,8 @@ class UsersController < ApplicationController
   end
 
   def show
+    @comments = Comment.where(user_id: current_user).reverse_order
+    @posts = Post.where(user_id: current_user).reverse_order
     render :show
   end
 

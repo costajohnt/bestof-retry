@@ -66,7 +66,7 @@
 
   // See: [Geocoding Types](https://developers.google.com/maps/documentation/geocoding/#Types)
   // on Google Developers.
-  var componentTypes = ("street_address route intersection political " +
+  var componentTypes = ("street_address route intersection political " + "establishments" +
     "country administrative_area_level_1 administrative_area_level_2 " +
     "administrative_area_level_3 colloquial_area locality sublocality " +
     "neighborhood premise subpremise postal_code natural_feature airport " +
@@ -76,7 +76,7 @@
 
   // See: [Places Details Responses](https://developers.google.com/maps/documentation/javascript/places#place_details_responses)
   // on Google Developers.
-  var placesDetails = ("id place_id url website vicinity reference name rating " +
+  var placesDetails = ("id place_id url website vicinity reference name rating" +
     "international_phone_number icon formatted_phone_number").split(" ");
 
   // The actual plugin constructor.
@@ -266,6 +266,7 @@
         setDetail(key);
         setDetail(key + "_short");
       });
+
 
       $.each(placesDetails, function(index, key){
         setDetail(key);
