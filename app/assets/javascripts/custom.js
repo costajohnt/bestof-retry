@@ -5,7 +5,10 @@ $( document ).ready(function() {
     	$('.jumbotron h1').addClass('animated fadeOut');
     }
 
-    $('#searchbtn').on('click', changeClass);
+if ($('.searchform').val() !== null) {
+	$('#searchbtn').on('click', changeClass);
+}
+    
 
     // function updatePost() {
 

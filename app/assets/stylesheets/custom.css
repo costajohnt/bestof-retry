@@ -2,6 +2,7 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 .jumbotron, .navbar-custom {
+	/*background-color: #F23DB7;*/
 	background-color: #F23DB7;
 	color: white;
 	opacity: .90;
@@ -171,10 +172,39 @@ h3 {
     font-size: 2em;
     font-family: 'Roboto', sans-serif;
     padding-top: .2em;
+	padding-right: 5em;
 }
 
 #showNav {
 	margin-bottom: 5em; 
+}
+
+.footer {
+	margin-top: -1em;
+}
+
+.postResults {
+	-webkit-border-radius: 0;
+	  -moz-border-radius: 0;
+	  border-radius: 0px;
+	  color: #000000;
+	  font-size: 1.25em;
+	  text-decoration: none;
+	border-top: 0px none rgb(51, 51, 51);
+    border-right: 0px none rgb(51, 51, 51);
+    border-bottom: 1px solid rgb(211, 211, 211);
+    border-left: 0px none rgb(51, 51, 51);
+    background-color: white;
+/*    height: 46px;
+    width: 300px;*/
+    /*margin-right: 6px;*/
+}
+
+.postResults:hover, .postResults:focus {
+	background-color: rgba(56, 249, 255, 0.6);
+	-webkit-transition: all 1.0s;
+	-moz-transition: all 1.0s;
+	transition: all 1.0s;
 }
 
 @media  (max-width: 800px) {

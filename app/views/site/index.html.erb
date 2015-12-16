@@ -24,30 +24,30 @@
 <!-- DISPLAY POSTS -->
 <div class="row">
   <div class="col-sm-4">
-    <h3 class="splashPost text-center col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-10 col-md-offset-1">Active</h3>
+    <h3 class=" text-center col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-10 col-md-offset-1">Active</h3>
     <% @activeposts.each do |post| %>
     <div class="list-group text-center">
-      <div><%= button_to post.title, post, class: "splashPost results btn col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-10 col-md-offset-1", method: "get" %><br>
+      <div><%= button_to post.title, post, class: " results postResults col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-10 col-md-offset-1", method: "get" %><br>
       </div>
     </div>
     <% end %>
   </div>
 
   <div class="col-sm-4">
-    <h3 class="splashPost text-center col-xs-10 col-xs-offset-1 col-sm-12 col-md-10 col-md-offset-1">New</h3>
+    <h3 class=" text-center col-xs-10 col-xs-offset-1 col-sm-12 col-md-10 col-md-offset-1">New</h3>
     <% @newposts.each do |post| %>
     <div class="list-group text-center">
-      <div><%= button_to post.title, post, class: "splashPost results btn col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-10 col-md-offset-1", method: "get" %><br>
+      <div><%= button_to post.title, post, class: " results btn col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-10 col-md-offset-1", method: "get" %><br>
       </div>
     </div>
     <% end %>
   </div>
 
   <div class="col-sm-4">
-    <h3 class="splashPost text-center col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-10 col-md-offset-1">Popular</h3>
+    <h3 class=" text-center col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-10 col-md-offset-1">Popular</h3>
     <% @popularposts.each do |post| %>
     <div class="list-group text-center">
-      <div><%= button_to post.title, post, class: "splashPost results btn col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-10 col-md-offset-1", method: "get" %><br>
+      <div><%= button_to post.title, post, class: " results btn col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-10 col-md-offset-1", method: "get" %><br>
       </div>
     </div>
     <% end %>

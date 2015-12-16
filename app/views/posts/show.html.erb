@@ -3,14 +3,22 @@
 	<div class="container-fluid">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
-			<a class="nav navbar-nav navbar-brand" id="home" href="/">Best in the Land</a>
-			<!-- <li class="nav navbar-nav navbar-brand"><%= link_to "Best in the Land", root_path %></li> -->
+		<button type"button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<div id="postTitle">
+			<a class="navbar-brand" id="home" href="/">Best in the Land</a>
+			<div><%= @post.title %></div>
+		</div>
+			
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="#" id="">
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
 			<ul class="nav navbar-nav navbar-right">
-			<div id="postTitle"><%= @post.title %></div>
 				<% if current_user.present? %>  
 				<li><%= link_to "#{current_user.email}" %></li>
 				<li><%= link_to "Log out", logout_path %></li>
@@ -46,8 +54,7 @@
 			<h3 class="text-center">Sign in to vote for your favorites and add to the list!</h3>
 			<% end %>
 		</div>
-		<br>
-		<br>
+		<hr>
 		<!-- SHOW COMMENTS -->
 		<ul class="list-group">
 		<!-- Comment.order(:cached_votes_up).each -->
