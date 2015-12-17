@@ -38,8 +38,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @comments = Comment.where(user_id: current_user).reverse_order
-    @posts = Post.where(user_id: current_user).reverse_order
+    @comments = Comment.where(user_id: current_user).reverse_order.limit(15)
+    @posts = Post.where(user_id: current_user).reverse_order.limit(15)
     render :show
   end
 
