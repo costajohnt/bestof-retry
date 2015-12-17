@@ -201,6 +201,10 @@ h3 {
 	padding-left: 5em;
 }
 
+#votes {
+	margin-top: .7em;
+}
+
 @media  (max-width: 800px) {
 
 	#resultsPad {

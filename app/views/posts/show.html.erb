@@ -3,17 +3,16 @@
 	<div class="container-fluid">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
-		<button type"button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
-			<span class="sr-only">Toggle navigation</span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		</button>
-		<div id="postTitle">
-			<a class="navbar-brand" id="home" href="/">Best in the Land</a>
-			<div><%= @post.title %></div>
-		</div>
-			
+			<button type"button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<div id="postTitle">
+				<a class="navbar-brand" id="home" href="/">Best in the Land</a>
+				<div><%= @post.title %></div>
+			</div>	
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
@@ -33,8 +32,8 @@
 
 <!-- FORM FOR CREATING A NEW COMMENT -->
 <div class="container-fluid">
-<div class="col-sm-6 col-sm-offset-3">
-	<% if current_user.present? %>
+	<div class="col-sm-6 col-sm-offset-3">
+		<% if current_user.present? %>
 
 		<div class="form-group">	
 			<%= form_for [@post, @comment] do |f| %>
@@ -69,20 +68,20 @@
 					</div>
 					<% end %>
 				</div>
-				<div class="col-xs-2">
+				<div class="col-xs-2" id="votes">
 					<% if current_user.present? %>
 					<%= link_to like_comment_path(comment), method: :put do %>
 					<i class="fa fa-caret-up"></i>
 					<% end %>
-					<%= comment.get_upvotes.size %>
 					<% end %>
+					<%= comment.get_upvotes.size %>
 					<br>
 					<% if current_user.present? %>
 					<%= link_to dislike_comment_path(comment), method: :put do %>
 					<i class="fa fa-caret-down"></i>
 					<% end %>
-					<%= comment.get_downvotes.size %>
-					<% end %>	
+					<% end %>
+					<%= comment.get_downvotes.size %>	
 				</div>
 			</li>
 			<% end %>
