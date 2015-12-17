@@ -1,5 +1,5 @@
 # Description
-### Best in the Land helps users find the best item in any category.  Users find other people's favorites, vote on them, and create their own.  
+Best in the Land helps users find the best item in any category.  Users can find other people's favorites, vote on them, and create their own.  
  
 # Technologies
 ### Ruby on Rails, JavaScript
@@ -28,12 +28,12 @@ When the CRUD functionality for all of the resources was built, I spent a lot of
 ![login](http://i.imgur.com/dUVua10.jpg)
 ![login](http://i.imgur.com/gogJRlD.jpg)
 
-#Entity Relationship Diagrams
+#Entity Relationship Diagram
 
 ![login](http://i.imgur.com/FjGcPY5.jpg)
 
 #Unsolved Problems/Major Hurdles
 
-The biggest hurdle I faced was creating a vision for the project.  I had a really tough time trying to decide how the app would work and what features were most important.  I still haven't decided where I want to go with it, but I think a feature that filtered results locally and globally would be useful.  Google Places autocomplete works but only for addresses and not for businesses.  I either need to use the geocoding feature with the geocomplete funciton and figure a work around for the autocomplete, or remove the geocomplete gem and just use autocomplete.
+The biggest hurdle I faced was deciding on a vision for the project.  I had a really tough time trying to decide how the app would work and what features were most important.  I still haven't decided where I want to go with it, but I think a feature that filtered results locally and globally would be useful.  Google Places autocomplete works but only for addresses and not for businesses.  I either need to use the geocoding feature with the geocomplete funciton and figure a work around for the autocomplete, or remove the geocomplete gem and just use autocomplete.
 
 I'm still having some small problems with styling.  I don't like the way the searchbar collapses on mobile, best items display differently when users are not logged in, and list items on the user show page display differently towards the top of the list.

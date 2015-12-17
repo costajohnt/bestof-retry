@@ -33,8 +33,9 @@
 
 <!-- FORM FOR CREATING A NEW COMMENT -->
 <div class="container-fluid">
+<div class="col-sm-6 col-sm-offset-3">
 	<% if current_user.present? %>
-	<div class="col-sm-6 col-sm-offset-3">
+
 		<div class="form-group">	
 			<%= form_for [@post, @comment] do |f| %>
 			<div class="form-group">
