@@ -17,9 +17,3 @@ class Comment < ActiveRecord::Base
 
 	acts_as_votable
 end
-
-# @comment = Comment.new(:name => 'my comment!')
-# @comment.save
-
-# @comment.liked_by @user
-# @comment.votes_for.size # => 1

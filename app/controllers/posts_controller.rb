@@ -36,14 +36,9 @@ class PostsController < ApplicationController
 	end
 
 	def destroy
-	    # find the post to delete by id
 	    @post = Post.friendly.find(params[:id])
-	    # destroy the post
 	    @post.destroy
-	    # redirect to creatures index
-	    puts "im in post contrl"
 	    redirect_to root_path
-	    # ^ same as redirect_to "/creatures"
 	end
 
 	private

@@ -1,6 +1,5 @@
 <!-- JUMBOTRON -->
 <div class="jumbotron">
-  <!-- <div class="pull-right splashLog"><%= link_to "login", login_path%></div> -->
   <div class="text-center">
     <h1 class="animated fadeIn">Best In The Land</h1>
     <h2>Find, create, and vote for the best things</h2>
@@ -12,7 +11,7 @@
   <div class="form-inline">
     <span>
       <%= form_tag posts_path, { method: "get", :class => 'navbar-form', :role => 'search'} do %>
-      <%= text_field_tag :search, params[:search], required: true, class: 'searchform', :autofocus => true %>
+      <%= text_field_tag :search, params[:search], required: true, autocomplete: 'off', class: 'searchform', :autofocus => true %>
       <button class="btn" type="submit" id="searchbtn">search</button>
     </span>
     <% end %>

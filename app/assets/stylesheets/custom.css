@@ -2,7 +2,6 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 .jumbotron, .navbar-custom {
-	/*background-color: #F23DB7;*/
 	background-color: #F23DB7;
 	color: white;
 	opacity: .90;
@@ -24,7 +23,6 @@ body {
 
 .jumbotron h2 {
 	font-size: 1.7em;
-	/*font-family: 'Francois One', sans-serif;*/
 	font-family: 'Open Sans', sans-serif;
 }
 
@@ -96,10 +94,6 @@ input:focus {
 	padding: .75em 2em;
 }
 
-/*.footer {
-	margin-top: 3em;
-}*/
-
 #foot {
 	font-size: 1em;
 }
@@ -113,10 +107,6 @@ input:focus {
 	margin-bottom: .5em;
 	font-size: 1em;
 	font-family: 'Open Sans', sans-serif;
-/*	padding-top: .75em;
-	padding-bottom: .75em;
-	padding-left: 1em;
-	padding-right: 1em;*/
 }
 
 #resultsPad {
@@ -145,10 +135,6 @@ ul.nav a:hover, a:focus {
 	margin-top: 1.5em;
 	margin-bottom: 1.5em;
 }
-
-/*.splashPost {
-	padding: 0;
-}*/
 
 h3 {
 	font-family: 'Roboto', sans-serif;
@@ -196,18 +182,11 @@ h3 {
     border-left: 0px none rgb(51, 51, 51);
     background-color: white;
     margin-top: 1em;
-/*    height: 46px;
-    width: 300px;*/
-    /*margin-right: 6px;*/
 }
 
 .postResults:hover, .postResults:focus {
-	/*background-color: rgba(56, 249, 255, 0.6);*/
 	border-bottom: 3px solid black;
 	font-size: 1em;
-/*	-webkit-transition: all .5s;
-	-moz-transition: all .5s;
-	transition: all .5s;*/
 }
 
 .status {
@@ -222,16 +201,8 @@ h3 {
 	padding-left: 5em;
 }
 
-
-
 @media  (max-width: 800px) {
-/*	.postCreate {
-		padding-right: 3em;
-		padding-left: 3em;
-		padding-top: .5em;
-		padding-bottom: .5em;
-		font-size: 1.5em;
-*/
+
 	#resultsPad {
 		padding-bottom: 1.5em;
 	}
@@ -260,26 +231,4 @@ h3 {
 	.jumbotron h2 {
 		font-size: 1.5em;
 	}
-/*	.footer {
-		margin-top: 0em;
-	}*/
 }
-/*.comment-containers {
-	padding-bottom: 20px;
-	padding-right: 0px !important;
-	padding-left: 0px !important;
-}*/
-
-/*.comment-boxes {
-	padding-left: 3px !important;
-	padding-right: 3px !important;
-}
-
-.media-object {
-	width: 100px;
-	height: 100px;
-}
-
-.media	{
-	display: inline;
-}*/
