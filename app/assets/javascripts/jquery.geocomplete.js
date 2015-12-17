@@ -58,7 +58,7 @@
     },
 
     maxZoom: 16,
-    types: ['geocode'],
+    types: ['establishment'],
     blur: false,
     geocodeAfterResult: false,
     restoreValueAfterBlur: false

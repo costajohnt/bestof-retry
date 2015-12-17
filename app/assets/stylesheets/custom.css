@@ -195,6 +195,7 @@ h3 {
     border-bottom: 1px solid rgb(211, 211, 211);
     border-left: 0px none rgb(51, 51, 51);
     background-color: white;
+    margin-top: 1em;
 /*    height: 46px;
     width: 300px;*/
     /*margin-right: 6px;*/
@@ -220,6 +221,8 @@ h3 {
 	padding-bottom: 5em;
 	padding-left: 5em;
 }
+
+
 
 @media  (max-width: 800px) {
 /*	.postCreate {
