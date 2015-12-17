@@ -22,7 +22,7 @@ When the CRUD functionality for all of the resources was built, I spent a lot of
 
 #Wireframes
 
-![Login/Signup](http://imgur.com/kQMljRI) <!-- THIS DOESNT WORK -->
+![Login/Signup](http://imgur.com/kQMljRI)
 <!-- ![man on wire](http://static.rogerebert.com/uploads/review/primary_image/reviews/man-on-wire-2008/hero_EB20080804REVIEWS808070305AR.jpg) -->
 <!-- Inline-style: 
 ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
